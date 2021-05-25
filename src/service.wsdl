@@ -72,10 +72,10 @@
   <!-- SERVICE:  -->
   <wsdl:service name="MessageRecebimentoService">
     <wsdl:port name="MessageRecebimentoServiceSoapPort" binding="tns:MessageRecebimentoServiceSoapBinding">
-      <soap:address location="http://localhost:9000/wsdl"/>
+      <soap:address location="https://poupatempo.potencialtecnologia.com.br/wsdl?wsdl"/>
     </wsdl:port>
     <wsdl:port name="MessageRecebimentoServiceSoap12Port" binding="tns:MessageRecebimentoServiceSoap12Binding">
-      <soap12:address location="http://localhost:9000/wsdl"/>
+      <soap12:address location="https://poupatempo.potencialtecnologia.com.br/wsdl?wsdl"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
