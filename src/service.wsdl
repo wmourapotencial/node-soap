@@ -12,7 +12,7 @@
   xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <!-- WSDL TYPES: definition of the data types that are used in the web service -->
   <wsdl:types>
-    <s:schema elementFormDefault="qualified" targetNamespace="">
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
       <s:element name="MessageRecebimentoRequest">
         <s:complexType>
           <s:sequence>
