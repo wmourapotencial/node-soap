@@ -33,7 +33,7 @@ async function bootstrap() {
     }
   };
 
-  let app2 = await app.listen(3000);
+  let app2 = await app.listen(6000);
   var wsdl_path = "/wsdl";
 
   await soap.listen(app2, wsdl_path, serviceObject, xml);
