@@ -34,10 +34,10 @@ async function bootstrap() {
   var serviceObject = {
   MessageRecebimentoService: {
         MessageRecebimentoServiceSoapPort: {
-            MessageRecebimento: splitter_function
+          wsRecebimento: splitter_function
         },
         MessageRecebimentoServiceSoap12Port: {
-            MessageRecebimento: splitter_function
+          wsRecebimento: splitter_function
         }
     }
   };
