@@ -19,7 +19,7 @@ async function bootstrap() {
     }
   }
 
-  var xml = fs.readFileSync('/Users/xitaomoura/Projetos/soap-nestjs/src/service.wsdl', 'utf8');
+  var xml = fs.readFileSync('/var/www/html/node-soap/src/service.wsdl', 'utf8');
 
   // the service
   var serviceObject = {
