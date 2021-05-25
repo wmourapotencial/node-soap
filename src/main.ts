@@ -3,6 +3,15 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 var soap = require('soap');
 var fs = require('fs-extra');
+var data = new Date();
+var dia     = data.getDate();
+var mes     = data.getMonth();
+var ano    = data.getFullYear();
+var hora    = data.getHours();
+var min     = data.getMinutes();
+var seg     = data.getSeconds();
+var str_data = dia + '/' + (mes+1) + '/' + ano;
+var str_hora = hora + ':' + min + ':' + seg;
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -10,7 +19,7 @@ async function bootstrap() {
   // the splitter function, used by the service
   function splitter_function(args) {
     let logger = new Logger('Message Recebimento')
-    logger.log(`${args.message}`)
+    logger.log(`[${str_data} ${str_hora}]${args.message}`)
     fs.appendFile("./log.txt", args.message+ "\n", function (err) {
         if (err) console.log(err);
     });
