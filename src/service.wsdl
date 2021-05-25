@@ -39,7 +39,7 @@
   <!-- PORT TYPES: defines the complete communication operation (one way/round trip) -->
   <wsdl:portType name="MessageRecebimentoSoapPort">
     <!-- The operation name must be the same as the one specified in the service object -->
-    <wsdl:operation name="MessageRecebimento">
+    <wsdl:operation name="wsRecebimento">
       <wsdl:input message="tns:MessageRecebimentoSoapIn"/>
       <wsdl:output message="tns:MessageRecebimentoSoapOut"/>
     </wsdl:operation>
@@ -47,8 +47,8 @@
   <!-- BINDING: provides details on how a portType operation will actually be transmitted -->
   <wsdl:binding name="MessageRecebimentoServiceSoapBinding" type="tns:MessageRecebimentoSoapPort">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
-    <wsdl:operation name="MessageRecebimento">
-      <soap:operation soapAction="MessageRecebimento" style="document"/>
+    <wsdl:operation name="wsRecebimento">
+      <soap:operation soapAction="wsRecebimento" style="document"/>
       <wsdl:input>
         <soap:body use="literal"/>
       </wsdl:input>
@@ -59,8 +59,8 @@
   </wsdl:binding>
   <wsdl:binding name="MessageRecebimentoServiceSoap12Binding" type="tns:MessageRecebimentoSoapPort">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
-    <wsdl:operation name="MessageRecebimento">
-      <soap12:operation soapAction="MessageRecebimento" style="document"/>
+    <wsdl:operation name="wsRecebimento">
+      <soap12:operation soapAction="wsRecebimento" style="document"/>
       <wsdl:input>
         <soap12:body use="literal"/>
       </wsdl:input>
